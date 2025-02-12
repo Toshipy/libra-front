@@ -1,13 +1,12 @@
-'use server'
-
 import { z } from 'zod'
 
 export const bookSchema = z.object({
   id: z.number(),
   title: z.string(),
   story: z.string(),
-  createdAt: z.string(),
-  updatedAt: z.string()
+  attributes: z.array(z.string()),
+  created_at: z.string(),
+  updated_at: z.string()
 })
 
 export const booksSchema = z.array(bookSchema)
@@ -37,7 +36,11 @@ export const searchBooksParamsSchema = z.object({
 export const searchBooksRequestSchema = z.object({
   params: searchBooksParamsSchema
 })
-export const searchBooksResponseSchema = booksSchema
 export const searchQuerySchema = z.object({
   keyword: z.string().min(1).max(100)
 })
+export const searchResultSchema = z.object({
+  hits: z.number(),
+  results: z.array(bookSchema)
+})
+export const searchBooksResponseSchema = searchResultSchema

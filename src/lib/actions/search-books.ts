@@ -6,9 +6,9 @@ import { searchQuerySchema } from '../zod/schemas/books'
 
 export const searchBooksAction = actionClient
   .schema(searchQuerySchema)
-  .action(async ({ parsedInput }) => {
+  .action(async input => {
     const books = await searchBooks({
-      params: { keyword: parsedInput.keyword }
+      params: { keyword: input.parsedInput.keyword }
     })
     return books
   })

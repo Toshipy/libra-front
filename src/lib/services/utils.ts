@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import logger from '../logger'
 
-export const host = process.env.API_HOST || 'http://localhost:8787'
+export const host = process.env.NEXT_PUBLIC_API_HOST
 
 export const path = (path?: string) => {
   if (!path) return `${host}/`

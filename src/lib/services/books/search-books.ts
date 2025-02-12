@@ -5,18 +5,15 @@ import { SearchBooksRequest, SearchBooksResponse } from '@/lib/types/books'
 export const searchBooks = async ({
   params: { keyword }
 }: SearchBooksRequest): Promise<SearchBooksResponse> => {
-  // console.log('API called with keyword:', keyword)
-  return fetch(
-    path(`/api/books/search?${new URLSearchParams({ keyword: encodeURIComponent(keyword) })}
-    `),
-    {
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      method: 'GET',
-      cache: 'force-cache'
-    }
-  )
+  const url = path(`/books?keyword=${encodeURIComponent(keyword)}`)
+  console.log('Request URL:', url)
+  return fetch((url), {
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    method: 'GET',
+    cache: 'no-store'
+  })
     .then(handleSucceed)
     .catch(handleFailed)
 }
