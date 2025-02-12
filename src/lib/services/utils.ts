@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import { logger } from '../logger'
+import logger from '../logger'
 
 export const host = process.env.API_HOST || 'http://localhost:8787'
 

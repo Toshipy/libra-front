@@ -1,4 +1,4 @@
-import { logger } from '@/lib/logger'
+import logger from '@/lib/logger'
 import {
   DEFAULT_SERVER_ERROR_MESSAGE,
   createSafeActionClient
