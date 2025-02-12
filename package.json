@@ -1,0 +1,43 @@
+{
+  "name": "booker-front",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "biome lint --write",
+    "format": "biome format --write",
+    "check": "biome check",
+    "type-check": "tsc --noEmit",
+    "all:check": "run-s type-check check",
+    "all:fix": "biome check --write"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "15.1.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  },
+  "engines": {
+    "node": "^20.17.0",
+    "npm": "use pnpm",
+    "yarn": "use pnpm",
+    "pnpm": ">=9.8.0"
+  },
+  "packageManager": "pnpm@9.12.3",
+  "pnpm": {
+    "overrides": {
+      "@types/react": "npm:types-react@19.0.0-rc.1",
+      "@types/react-dom": "npm:types-react-dom@19.0.0"
+    }
+  }
+}
