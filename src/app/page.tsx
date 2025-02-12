@@ -1,7 +1,8 @@
 import { SearchBox } from '@/components/search-box/search-box'
 import { Typography } from '@/components/ui/typography'
+import { getBooks } from '@/lib/services/books/get-books'
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <div className="w-full max-w-[584px]">
