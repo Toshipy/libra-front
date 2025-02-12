@@ -1,7 +1,7 @@
 'use server'
 
-import { searchBooks } from '@/lib/services/books/search-books'
 import { actionClient } from '@/lib/actions/books/safe-action'
+import { searchBooks } from '@/lib/services/books/search-books'
 import { searchQuerySchema } from '../zod/schemas/books'
 
 export const searchBooksAction = actionClient
