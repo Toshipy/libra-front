@@ -1,7 +1,7 @@
 'use client'
 
-import { Book, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Book, X } from 'lucide-react'
 
 import {
   Command,
@@ -12,9 +12,9 @@ import {
   CommandList
 } from '@/components/ui/command'
 import { searchBooksAction } from '@/lib/actions/search-books'
+import { useSearchStore } from '@/store/search'
 import { useAction } from 'next-safe-action/hooks'
 import { FC, type KeyboardEvent, useRef, useState } from 'react'
-import { useSearchStore } from '@/store/search'
 
 export const SearchBox: FC = () => {
   const inputRef = useRef<HTMLInputElement>(null)
