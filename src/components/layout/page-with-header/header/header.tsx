@@ -1,6 +1,6 @@
+import { Button } from '@/components/ui/button'
 import type { FC } from 'react'
 import { HeaderLogo } from '../header-logo/header-logo'
-import { Button } from '@/components/ui/button'
 
 export const Header: FC = () => {
   return (

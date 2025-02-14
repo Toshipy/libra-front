@@ -1,5 +1,5 @@
-import { FC, ReactNode } from 'react'
 import { Geist, Geist_Mono } from 'next/font/google'
+import { FC, ReactNode } from 'react'
 
 type Props = {
   header: ReactNode
