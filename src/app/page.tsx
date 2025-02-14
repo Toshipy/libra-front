@@ -1,6 +1,6 @@
 import { SearchBox } from '@/components/search-box/search-box'
+import { SearchResults } from '@/components/search-results/search-results'
 import { Typography } from '@/components/ui/typography'
-import { getBooks } from '@/lib/services/books/get-books'
 
 export default async function Home() {
   return (
@@ -11,9 +11,12 @@ export default async function Home() {
             Your library.
           </Typography>
         </div>
-        <div className="flex items-center size-full justify-center p-4">
+        <div className="flex items-center size-full justify-center p-4 w-full">
           <SearchBox />
         </div>
+      </div>
+      <div className="w-full max-w-7xl px-4">
+        <SearchResults />
       </div>
     </div>
   )
