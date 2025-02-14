@@ -6,7 +6,6 @@ export const searchBooks = async ({
   params: { keyword }
 }: SearchBooksRequest): Promise<SearchBooksResponse> => {
   const url = path(`/books?keyword=${encodeURIComponent(keyword)}`)
-  console.log('Request URL:', url)
   return fetch(url, {
     headers: {
       'Content-Type': 'application/json'
