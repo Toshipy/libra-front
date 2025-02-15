@@ -11,7 +11,7 @@ import {
   CommandItem,
   CommandList
 } from '@/components/ui/command'
-import { searchBooksAction } from '@/lib/actions/search-books'
+import { searchBooksAction } from '@/lib/actions/books/search-books'
 import { useSearchStore } from '@/store/search'
 import { useAction } from 'next-safe-action/hooks'
 import { FC, type KeyboardEvent, useRef, useState } from 'react'

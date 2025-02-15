@@ -44,3 +44,12 @@ export const searchResultSchema = z.object({
   results: z.array(bookSchema)
 })
 export const searchBooksResponseSchema = searchResultSchema
+
+// Create Book
+export const createBookParamsSchema = z.object({
+  title: z.string().min(1).max(50)
+})
+export const createBookRequestSchema = bookSchema.pick({
+  title: true
+})
+export const createBookResponseSchema = bookSchema
