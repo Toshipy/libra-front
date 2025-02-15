@@ -2,6 +2,8 @@ import { z } from 'zod'
 import {
   bookSchema,
   booksSchema,
+  createBookRequestSchema,
+  createBookResponseSchema,
   getBookRequestSchema,
   getBookResponseSchema,
   getBooksRequestSchema,
@@ -24,3 +26,7 @@ export type GetBooksResponse = z.infer<typeof getBooksResponseSchema>
 // Search Books
 export type SearchBooksRequest = z.infer<typeof searchBooksRequestSchema>
 export type SearchBooksResponse = z.infer<typeof searchBooksResponseSchema>
+
+// Create Book
+export type CreateBookRequest = z.infer<typeof createBookRequestSchema>
+export type CreateBookResponse = z.infer<typeof createBookResponseSchema>
