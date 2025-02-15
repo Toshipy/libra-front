@@ -32,7 +32,9 @@ export const BookAddButton: FC = () => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button onClick={openCreateBookDialog} variant="secondary">追加する</Button>
+        <Button onClick={openCreateBookDialog} variant="secondary">
+          追加する
+        </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
