@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import logger from '../logger'
+import { logger } from '../logger'
 
 export const host = process.env.NEXT_PUBLIC_API_HOST
 
