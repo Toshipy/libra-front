@@ -1,6 +1,6 @@
+import { LogoutButton } from '@/components/logout-button/logout-button'
 import type { FC } from 'react'
 import { HeaderLogo } from '../header-logo/header-logo'
-import { HeaderDropdownMenu } from './header-dropdown-menu/header-dropdown-menu'
 
 export const Header: FC = () => {
   return (
@@ -8,7 +8,7 @@ export const Header: FC = () => {
       <div className="flex items-center gap-3">
         <HeaderLogo />
       </div>
-      <HeaderDropdownMenu />
+      <LogoutButton />
     </div>
   )
 }
