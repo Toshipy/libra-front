@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button'
+import { LogoutButton } from '@/components/logout-button/logout-button'
 import type { FC } from 'react'
 import { HeaderLogo } from '../header-logo/header-logo'
 
@@ -8,6 +8,7 @@ export const Header: FC = () => {
       <div className="flex items-center gap-3">
         <HeaderLogo />
       </div>
+      <LogoutButton />
     </div>
   )
 }

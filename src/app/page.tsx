@@ -1,7 +1,6 @@
 import { BookAddButton } from '@/components/book/book-add-button/book-add-button'
 import { SearchBox } from '@/components/search-box/search-box'
 import { SearchResults } from '@/components/search-results/search-results'
-import { Button } from '@/components/ui/button'
 import { Typography } from '@/components/ui/typography'
 
 export default async function Home() {
